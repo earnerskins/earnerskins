@@ -34,9 +34,10 @@ const COLUMNS = [
     title: "Legal",
     links: [
       { label: "Terms & Conditions", href: "/legal/terms" },
-      { label: "Privacy Policy", href: "/legal/privacy" },
+      { label: "Delivery Policy", href: "/legal/delivery" },
+      { label: "Refund & Cancellation", href: "/legal/refund" },
       { label: "Payment Policy", href: "/legal/payment" },
-      { label: "Refund Policy", href: "/legal/refund" },
+      { label: "Privacy Policy", href: "/legal/privacy" },
       { label: "Cookie Policy", href: "/legal/cookies" },
     ],
   },
@@ -83,7 +84,7 @@ export function SiteFooter() {
               <a href={`mailto:${COMPANY.email}`} className="hover:text-ink">
                 {COMPANY.email}
               </a>{" "}
-              · {COMPANY.phone} · Support {COMPANY.supportHours}
+              · Support {COMPANY.supportHours}
             </p>
           </div>
           <PaymentMarks className="flex items-center gap-2 md:justify-end" />

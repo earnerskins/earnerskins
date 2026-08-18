@@ -38,10 +38,6 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-muted">Phone</dt>
-                <dd className="text-ink">{COMPANY.phone}</dd>
-              </div>
-              <div>
                 <dt className="text-muted">Support hours</dt>
                 <dd className="text-ink">{POLICIES.supportHours}</dd>
               </div>

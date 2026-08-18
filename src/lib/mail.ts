@@ -67,6 +67,19 @@ export function passwordResetEmail(resetUrl: string): string {
   );
 }
 
+export function balanceTopUpEmail(
+  firstName: string,
+  amountFormatted: string,
+  balanceFormatted: string,
+): string {
+  return shell(
+    "Balance topped up",
+    `<p style="color:#8A8F9C;line-height:1.6">Hi ${firstName}, we've added <strong style="color:#EDEFF3">${amountFormatted}</strong> to your EarnerSkins balance. It's ready to spend on skins across CS2, Team Fortress 2 and Rust.</p>
+     <p style="margin-top:16px">New balance: <strong style="font-family:monospace">${balanceFormatted}</strong></p>
+     <a href="${site()}/account/wallet" style="display:inline-block;margin-top:16px;background:#B8F04A;color:#0C1400;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600">View wallet</a>`,
+  );
+}
+
 export function orderConfirmationEmail(orderNumber: string, totalFormatted: string): string {
   return shell(
     `Order ${orderNumber} confirmed`,

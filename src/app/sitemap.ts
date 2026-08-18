@@ -18,9 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/login",
     "/register",
     "/legal/terms",
-    "/legal/privacy",
-    "/legal/payment",
+    "/legal/delivery",
     "/legal/refund",
+    "/legal/payment",
+    "/legal/privacy",
     "/legal/cookies",
   ];
 

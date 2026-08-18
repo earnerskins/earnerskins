@@ -106,7 +106,7 @@ const config: Config = {
         shimmer: "shimmer 1.6s linear infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         marquee: "marquee 40s linear infinite",
-        "marquee-slow": "marquee 70s linear infinite",
+        "marquee-slow": "marquee 150s linear infinite",
         "orb-float": "orb-float 12s ease-in-out infinite",
         "beam-drift": "beam-drift 14s ease-in-out infinite",
         "foil-pan": "foil-pan 6s linear infinite",
