@@ -32,7 +32,7 @@ export function CookieConsent() {
         <div
           role="dialog"
           aria-label="Cookie consent"
-          className="fixed inset-x-0 bottom-0 z-[60] border-t border-hairline bg-panel/98 backdrop-blur"
+          className="fixed inset-x-0 bottom-0 z-[60] border-t border-hairline bg-panel/95 backdrop-blur"
         >
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 md:flex-row md:items-center md:justify-between">
             <p className="max-w-2xl text-sm text-muted">

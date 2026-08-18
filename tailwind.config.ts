@@ -5,6 +5,11 @@ import type { Config } from "tailwindcss";
  * All colors live here — no ad-hoc hex values in components.
  * Dark is primary; a `.light` class variant swaps the base tokens.
  */
+// Tokens are CSS variables (hex), so Tailwind can't inject an alpha channel the
+// usual way. Wrapping in color-mix makes opacity modifiers (e.g. bg-panel/98)
+// resolve correctly; with no modifier <alpha-value> defaults to 1 (fully opaque).
+const alpha = (v: string) => `color-mix(in srgb, ${v} calc(<alpha-value> * 100%), transparent)`;
+
 const config: Config = {
   darkMode: ["class", '[data-theme="light"]'],
   content: ["./src/**/*.{ts,tsx,mdx}"],
@@ -12,13 +17,13 @@ const config: Config = {
     extend: {
       colors: {
         // Vault surfaces (dark, primary)
-        base: "var(--c-base)",
-        panel: "var(--c-panel)",
-        card: "var(--c-card)",
-        hairline: "var(--c-hairline)",
+        base: alpha("var(--c-base)"),
+        panel: alpha("var(--c-panel)"),
+        card: alpha("var(--c-card)"),
+        hairline: alpha("var(--c-hairline)"),
         // Text
-        ink: "var(--c-ink)",
-        muted: "var(--c-muted)",
+        ink: alpha("var(--c-ink)"),
+        muted: alpha("var(--c-muted)"),
         // Brand primary — acid mint
         primary: {
           DEFAULT: "#B8F04A",

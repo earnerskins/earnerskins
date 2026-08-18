@@ -257,7 +257,7 @@ function MegaPanel({ slug, onClose }: { slug: string; onClose: () => void }) {
   const featured = game.categories[0];
   return (
     <div
-      className="absolute inset-x-0 top-full border-y border-hairline bg-panel/98 shadow-vault backdrop-blur"
+      className="absolute inset-x-0 top-full border-y border-hairline bg-panel/95 shadow-vault backdrop-blur"
       onMouseLeave={onClose}
     >
       <span className="foil-divider absolute inset-x-0 top-0" aria-hidden />
